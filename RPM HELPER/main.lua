@@ -5,21 +5,6 @@
 -----------------------------------------------------------------------------------------
 
 -- Your code here
--- ads below--------------------------------------------------------------------------------
-local revmob = require( "plugin.revmob" )
-local placementID = "Fullscreen"
-local function adListener( event )
-    if ( event.phase == "sessionStarted" ) then  -- Successful initialization
-        -- Load a RevMob ad
-        revmob.load( "interstitial", placementID )
- 
-    elseif ( event.phase == "loaded" ) then  -- The ad was successfully loaded
-        -- Show the ad
-        revmob.show( placementID )
-    end
-end
--- Initialize RevMob
-revmob.init( adListener, { appId="5aa16d4aa30c3b1c882e3a2b " } )
 ----------------------------------------------------------------------------------------
 local w = display.viewableContentWidth
 local h = display.viewableContentHeight
@@ -29,6 +14,10 @@ local image = display.newImageRect( "img/cnc-bg.jpg", w+100, h+100 )
 image.x = display.contentCenterX
 image.y = display.contentCenterY
 ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 local options = 
 {
 	text = "Cutting speed!",
@@ -87,6 +76,10 @@ local function handleButtonEvent( event )
 		end
 	end
 
+local btnSub = display.newImageRect( "img/submit.png", 180, 40 )
+btnSub.x = w/2
+btnSub.y = h
+	
 -- Create the widget
 local button1 = widget.newButton(
     {
