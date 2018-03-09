@@ -58,8 +58,8 @@ local function handleButtonEvent( event )
 			cs = numericField.text
 			dia = numericField2.text
 			var = 12*cs/(dia*3.1416)
-			var2 = format( "%0.3f", var )
-			local alert = native.showAlert( "Corona", var2 .." RPM" )
+			var = math.floor(var)
+			local alert = native.showAlert( "Corona", var .." RPM" )
 			subtn:setFillColor( 0.5 )
 		end
 	end
