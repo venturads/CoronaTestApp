@@ -25,7 +25,9 @@ local w = display.viewableContentWidth
 local h = display.viewableContentHeight
 local dia = numericField
 local cs = numericField2
---local rpm = 
+local image = display.newImageRect( "img/cnc-bg.jpg", w+100, h+100 )
+image.x = display.contentCenterX
+image.y = display.contentCenterY
 ----------------------------------------------------------------------------------------
 local options = 
 {
