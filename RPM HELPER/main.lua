@@ -8,8 +8,8 @@ centerX = display.contentWidth / 2
 centerY = display.contentHeight / 2
 withScrn = display.contentWidth*2
 heightScrn = display.contentHeight*2
-topScrn = display.contentHeight
-leftScrn = display.contentWidth
+w = display.viewableContentWidth
+h = display.viewableContentHeight
 -- defintion of the background
 --backgroundfill = display.newRect(leftScrn, topScrn, withScrn, heightScrn)
 -- only the splash screen has a white background
@@ -20,8 +20,8 @@ local composer = require ("composer")
 local scene = composer.newScene()
 
  
-local splash = display.newImage ("img/splash-full.jpg")
---splash:scale(.9,.9)
+local splash = display.newImage ("img/splash-full.jpg", 32, h)
+splash:scale(.5,.5)
 splash.x = centerX
 splash.y = centerY
  
