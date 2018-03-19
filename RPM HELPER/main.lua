@@ -20,7 +20,7 @@ local composer = require ("composer")
 local scene = composer.newScene()
 
  
-local splash = display.newImage ("images/splash-full.jpg")
+local splash = display.newImage ("img/splash-full.jpg")
 --splash:scale(.9,.9)
 splash.x = centerX
 splash.y = centerY

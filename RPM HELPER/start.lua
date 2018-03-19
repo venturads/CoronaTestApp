@@ -6,6 +6,9 @@
 
 -- Your code here
 ----------------------------------------------------------------------------------------
+local composer = require( "composer" )
+local scene = composer.newScene()
+
 local w = display.viewableContentWidth
 local h = display.viewableContentHeight
 local dia = numericField
@@ -20,6 +23,7 @@ image.y = display.contentCenterY
 
 -----------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
+function scene:create(event)
 local options = 
 {
 	text = "Cutting speed!",
@@ -118,3 +122,15 @@ if event.phase == "began" then
 	return true
 end
 btnSub:addEventListener("touch", goSub)
+end
+function scene:show(event)
+end
+function scene:hide(event)
+end
+function scene:destroy(event)
+end
+scene:addEventListener("create", scene)
+scene:addEventListener("show", scene)
+scene:addEventListener("hide", scene)
+scene:addEventListener("destroy", scene)
+return scene
